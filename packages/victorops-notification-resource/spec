@@ -1,0 +1,7 @@
+---
+name: victorops-notification-resource
+
+dependencies: []
+
+files:
+  - victorops-notification-resource/rootfs.tar

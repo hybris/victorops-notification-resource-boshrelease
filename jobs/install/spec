@@ -1,0 +1,10 @@
+---
+name: install
+
+packages:
+  - victorops-notification-resource
+
+templates:
+  empty: empty
+
+properties: {}
