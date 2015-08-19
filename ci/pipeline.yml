@@ -29,7 +29,7 @@ jobs:
         - task: create-release-and-deploy
           config:
             platform: linux
-            image: docker:///{{docker-hub-task-image}}
+            image: {{docker-hub-task-image}}
             inputs:
               - {name: victorops-notification-resource-boshrelease}
             run:
@@ -98,7 +98,7 @@ jobs:
       - task: create-final-release
         config:
           platform: linux
-          image: docker:///{{docker-hub-task-image}}
+          image: {{docker-hub-task-image}}
           inputs:
           - {name: boshrelease, path: victorops-notification-resource-boshrelease}
           - {name: version}
@@ -246,7 +246,7 @@ resources:
       email: {{docker-hub-email}}
       username: {{docker-hub-username}}
       password: {{docker-hub-password}}
-      repository: {{docker-hub-task-image}}
+      repository: {{docker-create-hub-task-image}}
 
   # docker image for building the resource
   - name: resource-image
@@ -255,4 +255,4 @@ resources:
       email: {{docker-hub-email}}
       username: {{docker-hub-username}}
       password: {{docker-hub-password}}
-      repository: {{docker-hub-resource-image}}
+      repository: {{docker-create-hub-resource-image}}
