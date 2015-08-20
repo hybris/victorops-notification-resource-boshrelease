@@ -1,1 +1,6 @@
---- {}
+---
+victorops-notification-resource/rootfs.tar:
+  object_id: 522143fc-cff8-471c-bb77-9254008bf88e
+  sha: !binary |-
+    YjM5Zjc4MDI4OGJmZTMxNTE3YmRlMmRlNTRiMDhiYzVhM2UzYTc5MA==
+  size: 206152192
