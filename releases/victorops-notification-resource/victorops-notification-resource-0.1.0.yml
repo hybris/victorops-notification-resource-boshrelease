@@ -1,0 +1,29 @@
+---
+packages:
+- name: victorops-notification-resource
+  version: !binary |-
+    M2NhOWJhMmZiODIxOGYyZjk3YmE2YmE5NDk3OTdhYzYwZGY4ODFhNg==
+  fingerprint: !binary |-
+    M2NhOWJhMmZiODIxOGYyZjk3YmE2YmE5NDk3OTdhYzYwZGY4ODFhNg==
+  sha1: !binary |-
+    YjY2ZWY1ODZhNGI5ODM0YjA5NjdiZTlkNjY1YjM1YzFjZTViYzQzNA==
+  dependencies: []
+jobs:
+- name: install
+  version: !binary |-
+    ZDczNTUyZmEzY2ZjZTkxMTFkNGY3NTZkZjE3NWJkM2I5MTdhZGEwMg==
+  fingerprint: !binary |-
+    ZDczNTUyZmEzY2ZjZTkxMTFkNGY3NTZkZjE3NWJkM2I5MTdhZGEwMg==
+  sha1: !binary |-
+    MGM0YTkyZGRmMjM5NzgzMTM3NGRmNWZlY2Q1YjUyNDdkYTdlNzljOA==
+license:
+  version: !binary |-
+    NTY5YTQ4MTY2M2Y5NWIxMGNiODAzNTM5YmE2MWE4YzI0YTg4MTQ2Mw==
+  fingerprint: !binary |-
+    NTY5YTQ4MTY2M2Y5NWIxMGNiODAzNTM5YmE2MWE4YzI0YTg4MTQ2Mw==
+  sha1: !binary |-
+    MDI3NmJmMzJmYjVkYzA1NmQ1ZTFiMGU2ODIwMDk2OTYyMDYwMzE3Yw==
+commit_hash: 87731aea
+uncommitted_changes: true
+name: victorops-notification-resource
+version: 0.1.0
