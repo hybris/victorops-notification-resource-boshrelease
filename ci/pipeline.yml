@@ -9,7 +9,7 @@ groups:
       - patch
       - minor
       - major
-  - name: deps
+  - name: dependencies
     jobs:
       - build-ci-image
       - build-blobs
