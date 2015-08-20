@@ -74,26 +74,30 @@ An example mini-pipeline that would send an alert:
 ```yaml
 ---
 jobs:
-- name: build_stuff
-  public: true
+- name: hello-world
   plan:
-    - get: resource1
-    - task: deploy
-      file: deploy.yml
-      on_failure:
-        - put: alert
-          params:
-            type: "CRITICAL"
-            entity: "build_stuff/task/deploy"
-            message: "build failed!!!"
+    - task: say-hello
+      config:
+        platform: linux
+        image: "docker:///busybox"
+        run:
+          path: echo
+          args: ["Hello, world!"]
       on_success:
-        - put: alert
-          params:
-            type: "RECOVERY"
-            entity: "build_stuff/task/deploy"
-            message: "build success!!!"
+        put: vo-alert
+        params:
+          type: RECOVERY
+          entity: "concourse/jobs/hello-world/say-hello"
+          message: "build success"
+      on_failure:
+        put: vo-alert
+        params:
+          type: CRITICAL
+          entity: "concourse/jobs/hello-world/say-hello"
+          message: "build failed"
+
 resources:
-- name: alert
+- name: vo-alert
   type: victorops-notification
   source:
     url: https://alert.victorops.com/integrations/generic/20131114/alert/<API_KEY>/<ROUTING_KEY>
