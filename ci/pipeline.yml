@@ -102,6 +102,8 @@ jobs:
           inputs:
           - {name: boshrelease, path: victorops-notification-resource-boshrelease}
           - {name: version}
+          outputs:
+          - {name: create-final-release, path: output}
           run:
             path: ./victorops-notification-resource-boshrelease/ci/scripts/shipit.sh
             args: []
@@ -113,7 +115,8 @@ jobs:
             bosh_deployment_name: {{bosh-lite-build-deployment-name}}
             aws_access_key_id: {{boshrelease-aws-access-key-id}}
             aws_secret_access_key: {{boshrelease-aws-secret-access-key}}
-            promotion_branch: master
+            promotion_branch: concourse-0.72
+            output_dir: ../output/victorops-notification-resource-boshrelease
       - put: git-release
         params:
           repository: create-final-release/victorops-notification-resource-boshrelease
